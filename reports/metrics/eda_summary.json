@@ -1,0 +1,120 @@
+{
+  "profile": {
+    "rows": 10000,
+    "columns_raw": 14,
+    "missing_values": 0,
+    "duplicate_rows": 0,
+    "failures": 339,
+    "failure_rate": 0.0339,
+    "failure_by_product_type": {
+      "H": {
+        "rows": 1003,
+        "failures": 21,
+        "rate": 0.020937188434695914
+      },
+      "L": {
+        "rows": 6000,
+        "failures": 235,
+        "rate": 0.03916666666666667
+      },
+      "M": {
+        "rows": 2997,
+        "failures": 83,
+        "rate": 0.02769436102769436
+      }
+    },
+    "type_flag_counts": {
+      "twf": 46,
+      "hdf": 115,
+      "pwf": 95,
+      "osf": 98,
+      "rnf": 19
+    },
+    "failures_with_no_type": 9,
+    "failures_with_multiple_types": 24,
+    "multiple_type_combinations": {
+      "PWF+OSF": 11,
+      "HDF+OSF": 6,
+      "HDF+PWF": 3,
+      "TWF+OSF": 2,
+      "TWF+RNF": 1,
+      "TWF+PWF+OSF": 1
+    },
+    "rnf_rows_marked_healthy": 18,
+    "rnf_rows_marked_failed": 1,
+    "tool_runs": 120,
+    "median_rows_per_run": 84.0,
+    "median_wear_at_run_end_min": 215.0,
+    "runs_ending_in_tool_wear_failure": 46,
+    "split_rows": {
+      "dev": 8049,
+      "test": 1951
+    },
+    "split_failures": {
+      "dev": 274,
+      "test": 65
+    }
+  },
+  "lead_indicators": {
+    "hdf": {
+      "n_positive": 93,
+      "top_by_mutual_info": "rot_speed_rpm",
+      "top_by_abs_spearman": "rot_speed_rpm",
+      "ranking_by_mutual_info": [
+        "rot_speed_rpm",
+        "air_temp_k",
+        "torque_nm",
+        "process_temp_k",
+        "tool_wear_min"
+      ]
+    },
+    "machine_failure": {
+      "n_positive": 274,
+      "top_by_mutual_info": "torque_nm",
+      "top_by_abs_spearman": "torque_nm",
+      "ranking_by_mutual_info": [
+        "torque_nm",
+        "rot_speed_rpm",
+        "tool_wear_min",
+        "air_temp_k",
+        "process_temp_k"
+      ]
+    },
+    "osf": {
+      "n_positive": 75,
+      "top_by_mutual_info": "tool_wear_min",
+      "top_by_abs_spearman": "torque_nm",
+      "ranking_by_mutual_info": [
+        "tool_wear_min",
+        "torque_nm",
+        "rot_speed_rpm",
+        "air_temp_k",
+        "process_temp_k"
+      ]
+    },
+    "pwf": {
+      "n_positive": 79,
+      "top_by_mutual_info": "torque_nm",
+      "top_by_abs_spearman": "torque_nm",
+      "ranking_by_mutual_info": [
+        "torque_nm",
+        "rot_speed_rpm",
+        "tool_wear_min",
+        "process_temp_k",
+        "air_temp_k"
+      ]
+    },
+    "twf": {
+      "n_positive": 37,
+      "top_by_mutual_info": "tool_wear_min",
+      "top_by_abs_spearman": "tool_wear_min",
+      "ranking_by_mutual_info": [
+        "tool_wear_min",
+        "torque_nm",
+        "air_temp_k",
+        "rot_speed_rpm",
+        "process_temp_k"
+      ]
+    }
+  }
+}

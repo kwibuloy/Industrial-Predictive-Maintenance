@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+data/raw/*
+!data/raw/.gitkeep
+data/processed/
+models/
+
+.claude/settings.local.json

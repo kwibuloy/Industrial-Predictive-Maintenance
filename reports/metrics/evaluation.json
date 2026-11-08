@@ -1,0 +1,299 @@
+{
+  "fdr_cap": 0.05,
+  "default_threshold": 0.5,
+  "winner": "lightgbm",
+  "note": "The winner and every threshold were chosen on development data. Test results for the other models are shown for context and must not be used to switch model.",
+  "stage1": {
+    "logreg": {
+      "threshold": 0.7225513886544052,
+      "dev_oof_default": {
+        "threshold": 0.5,
+        "tp": 65,
+        "fp": 24,
+        "fn": 209,
+        "tn": 7751,
+        "alarms": 89,
+        "fdr": 0.2696629213483146,
+        "precision": 0.7303370786516854,
+        "recall": 0.23722627737226276,
+        "accuracy": 0.9710523046341161
+      },
+      "test_default": {
+        "threshold": 0.5,
+        "tp": 15,
+        "fp": 6,
+        "fn": 50,
+        "tn": 1880,
+        "alarms": 21,
+        "fdr": 0.2857142857142857,
+        "precision": 0.7142857142857143,
+        "recall": 0.23076923076923078,
+        "accuracy": 0.9712967708867247
+      },
+      "dev_oof_tuned": {
+        "threshold": 0.7225513886544052,
+        "tp": 40,
+        "fp": 2,
+        "fn": 234,
+        "tn": 7773,
+        "alarms": 42,
+        "fdr": 0.047619047619047616,
+        "precision": 0.9523809523809523,
+        "recall": 0.145985401459854,
+        "accuracy": 0.9706795875264008
+      },
+      "test_tuned": {
+        "threshold": 0.7225513886544052,
+        "tp": 7,
+        "fp": 2,
+        "fn": 58,
+        "tn": 1884,
+        "alarms": 9,
+        "fdr": 0.2222222222222222,
+        "precision": 0.7777777777777778,
+        "recall": 0.1076923076923077,
+        "accuracy": 0.9692465402357765,
+        "bootstrap": {
+          "fdr_ci95": [
+            0.0,
+            0.5
+          ],
+          "recall_ci95": [
+            0.03368934436350167,
+            0.21739130434782608
+          ],
+          "n_groups": 24,
+          "n_boot": 2000,
+          "share_resamples_without_alarms": 0.0005
+        },
+        "cap_verdict": "not met"
+      }
+    },
+    "xgboost": {
+      "threshold": 0.7007409930229187,
+      "dev_oof_default": {
+        "threshold": 0.5,
+        "tp": 214,
+        "fp": 21,
+        "fn": 60,
+        "tn": 7754,
+        "alarms": 235,
+        "fdr": 0.08936170212765958,
+        "precision": 0.9106382978723404,
+        "recall": 0.781021897810219,
+        "accuracy": 0.9899366380916884
+      },
+      "test_default": {
+        "threshold": 0.5,
+        "tp": 57,
+        "fp": 3,
+        "fn": 8,
+        "tn": 1883,
+        "alarms": 60,
+        "fdr": 0.05,
+        "precision": 0.95,
+        "recall": 0.8769230769230769,
+        "accuracy": 0.9943618657098924
+      },
+      "dev_oof_tuned": {
+        "threshold": 0.7007409930229187,
+        "tp": 204,
+        "fp": 9,
+        "fn": 70,
+        "tn": 7766,
+        "alarms": 213,
+        "fdr": 0.04225352112676056,
+        "precision": 0.9577464788732395,
+        "recall": 0.7445255474452555,
+        "accuracy": 0.9901851161634986
+      },
+      "test_tuned": {
+        "threshold": 0.7007409930229187,
+        "tp": 54,
+        "fp": 1,
+        "fn": 11,
+        "tn": 1885,
+        "alarms": 55,
+        "fdr": 0.01818181818181818,
+        "precision": 0.9818181818181818,
+        "recall": 0.8307692307692308,
+        "accuracy": 0.9938493080471553,
+        "bootstrap": {
+          "fdr_ci95": [
+            0.0,
+            0.05457070707070693
+          ],
+          "recall_ci95": [
+            0.6938775510204082,
+            0.9104643449419567
+          ],
+          "n_groups": 24,
+          "n_boot": 2000,
+          "share_resamples_without_alarms": 0.0
+        },
+        "cap_verdict": "not demonstrable"
+      }
+    },
+    "lightgbm": {
+      "threshold": 0.7526639955570249,
+      "dev_oof_default": {
+        "threshold": 0.5,
+        "tp": 219,
+        "fp": 32,
+        "fn": 55,
+        "tn": 7743,
+        "alarms": 251,
+        "fdr": 0.12749003984063745,
+        "precision": 0.8725099601593626,
+        "recall": 0.7992700729927007,
+        "accuracy": 0.9891912038762579
+      },
+      "test_default": {
+        "threshold": 0.5,
+        "tp": 57,
+        "fp": 7,
+        "fn": 8,
+        "tn": 1879,
+        "alarms": 64,
+        "fdr": 0.109375,
+        "precision": 0.890625,
+        "recall": 0.8769230769230769,
+        "accuracy": 0.9923116350589442
+      },
+      "dev_oof_tuned": {
+        "threshold": 0.7526639955570249,
+        "tp": 213,
+        "fp": 11,
+        "fn": 61,
+        "tn": 7764,
+        "alarms": 224,
+        "fdr": 0.049107142857142856,
+        "precision": 0.9508928571428571,
+        "recall": 0.7773722627737226,
+        "accuracy": 0.9910547894148342
+      },
+      "test_tuned": {
+        "threshold": 0.7526639955570249,
+        "tp": 55,
+        "fp": 2,
+        "fn": 10,
+        "tn": 1884,
+        "alarms": 57,
+        "fdr": 0.03508771929824561,
+        "precision": 0.9649122807017544,
+        "recall": 0.8461538461538461,
+        "accuracy": 0.9938493080471553,
+        "bootstrap": {
+          "fdr_ci95": [
+            0.0,
+            0.08
+          ],
+          "recall_ci95": [
+            0.725,
+            0.918918918918919
+          ],
+          "n_groups": 24,
+          "n_boot": 2000,
+          "share_resamples_without_alarms": 0.0
+        },
+        "cap_verdict": "not demonstrable"
+      }
+    }
+  },
+  "stage1_recall_by_type": {
+    "twf": {
+      "failures": 9,
+      "caught": 1,
+      "missed": 8,
+      "recall": 0.1111111111111111
+    },
+    "hdf": {
+      "failures": 22,
+      "caught": 22,
+      "missed": 0,
+      "recall": 1.0
+    },
+    "pwf": {
+      "failures": 16,
+      "caught": 16,
+      "missed": 0,
+      "recall": 1.0
+    },
+    "osf": {
+      "failures": 23,
+      "caught": 22,
+      "missed": 1,
+      "recall": 0.9565217391304348
+    },
+    "untyped": {
+      "failures": 1,
+      "caught": 0,
+      "missed": 1,
+      "recall": 0.0
+    }
+  },
+  "stage2": {
+    "model": "lightgbm",
+    "flagged_rows": 57,
+    "flagged_true_failures": 55,
+    "flagged_false_alarms": 2,
+    "flagged_failures_without_type": 0,
+    "on_flagged_rows": {
+      "twf": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "actual": 1,
+        "predicted": 2
+      },
+      "hdf": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "actual": 22,
+        "predicted": 22
+      },
+      "pwf": {
+        "precision": 1.0,
+        "recall": 0.9375,
+        "actual": 16,
+        "predicted": 15
+      },
+      "osf": {
+        "precision": 0.88,
+        "recall": 1.0,
+        "actual": 22,
+        "predicted": 25
+      }
+    },
+    "exact_match_on_flagged_true_failures": 0.9454545454545454,
+    "on_all_typed_test_failures": {
+      "note": "Reference only: assumes stage 1 caught every failure.",
+      "rows": 64,
+      "per_type": {
+        "twf": {
+          "precision": 0.8888888888888888,
+          "recall": 0.8888888888888888,
+          "actual": 9,
+          "predicted": 9
+        },
+        "hdf": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "actual": 22,
+          "predicted": 22
+        },
+        "pwf": {
+          "precision": 0.9375,
+          "recall": 0.9375,
+          "actual": 16,
+          "predicted": 16
+        },
+        "osf": {
+          "precision": 0.8846153846153846,
+          "recall": 1.0,
+          "actual": 23,
+          "predicted": 26
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "target": "Minutes of wear left until the tool's run ends (failure or replacement)",
+  "is_proxy": true,
+  "late_life_wear_min": 150,
+  "features": [
+    "type",
+    "air_temp_k",
+    "process_temp_k",
+    "rot_speed_rpm",
+    "torque_nm",
+    "tool_wear_min",
+    "temp_diff_k",
+    "power_w",
+    "wear_torque",
+    "run_mean_torque",
+    "run_mean_power",
+    "run_rows_so_far"
+  ],
+  "runs": {
+    "used": 119,
+    "dev": 96,
+    "test": 23,
+    "ended_in_tool_wear_failure": 46,
+    "end_wear_min": {
+      "min": 198.0,
+      "mean": 215.65546218487395,
+      "max": 253.0,
+      "std": 10.560107997963025
+    }
+  },
+  "models": {
+    "baseline": {
+      "dev_oof": {
+        "mae_min": 7.8125548980425945,
+        "rmse_min": 9.81262618534188,
+        "r2": 0.9760547439527365,
+        "late_life_mae_min": 7.55398529727061,
+        "late_life_rows": 2475
+      },
+      "test": {
+        "mae_min": 9.182509833455653,
+        "rmse_min": 12.879443018207825,
+        "r2": 0.9600772342434982,
+        "late_life_mae_min": 9.0340115976635,
+        "late_life_rows": 615
+      }
+    },
+    "xgboost": {
+      "dev_oof": {
+        "mae_min": 8.561849878232424,
+        "rmse_min": 10.68661362660651,
+        "r2": 0.9715992903615559,
+        "late_life_mae_min": 8.057140509070772,
+        "late_life_rows": 2475
+      },
+      "test": {
+        "mae_min": 9.657814979553223,
+        "rmse_min": 13.336381912231445,
+        "r2": 0.9571942090988159,
+        "late_life_mae_min": 9.087906837463379,
+        "late_life_rows": 615
+      }
+    },
+    "lightgbm": {
+      "dev_oof": {
+        "mae_min": 8.653579127621724,
+        "rmse_min": 10.82675912885665,
+        "r2": 0.9708495055431123,
+        "late_life_mae_min": 7.904581969915541,
+        "late_life_rows": 2475
+      },
+      "test": {
+        "mae_min": 9.919579048894207,
+        "rmse_min": 13.619571066655299,
+        "r2": 0.9553570056061571,
+        "late_life_mae_min": 9.248218448855784,
+        "late_life_rows": 615
+      }
+    }
+  },
+  "winner": "baseline"
+}
